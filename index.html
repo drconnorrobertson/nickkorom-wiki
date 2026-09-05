@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nicholas Korom - Wiki</title>
+    <meta name="description" content="Nicholas Korom -- Founder and Chief Accelerating Officer of My BnB Accelerator, LLC. Strategic partner of AE Tax Advisors.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Linux+Libertine:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --wiki-blue: #3366cc;
+            --wiki-visited: #795cb2;
+            --wiki-bg: #f6f6f6;
+            --wiki-white: #ffffff;
+            --wiki-border: #a2a9b1;
+            --wiki-heading-border: #a2a9b1;
+            --wiki-text: #202122;
+            --wiki-light-text: #54595d;
+            --wiki-infobox-bg: #f8f9fa;
+            --wiki-infobox-header: #b8860b;
+            --wiki-toc-bg: #f8f9fa;
+            --wiki-cat-bg: #f0f0f0;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Linux Libertine', 'Georgia', 'Times', serif;
+            font-size: 16px;
+            line-height: 1.6;
+            color: var(--wiki-text);
+            background: var(--wiki-bg);
+        }
+
+        /* ---- HEADER ---- */
+        .wiki-header {
+            background: var(--wiki-white);
+            border-bottom: 1px solid #c8ccd1;
+            padding: 8px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .wiki-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: var(--wiki-text);
+        }
+        .wiki-logo-icon {
+            width: 44px;
+            height: 44px;
+            background: var(--wiki-text);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 1.25rem;
+        }
+        .wiki-logo-text {
+            font-size: 1.35rem;
+            font-weight: 400;
+            letter-spacing: -0.01em;
+        }
+        .wiki-logo-text span {
+            font-size: 0.75rem;
+            display: block;
+            color: var(--wiki-light-text);
+            font-style: italic;
+        }
+
+        /* ---- LAYOUT ---- */
+        .wiki-container {
+            display: flex;
+            max-width: 1200px;
+            margin: 0 auto;
+            gap: 0;
+        }
+
+        /* ---- SIDEBAR ---- */
+        .wiki-sidebar {
+            width: 180px;
+            min-width: 180px;
+            background: var(--wiki-white);
+            border-right: 1px solid #c8ccd1;
+            padding: 20px 16px;
+            font-size: 0.85rem;
+        }
+        .wiki-sidebar h3 {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            color: var(--wiki-light-text);
+            letter-spacing: 0.06em;
+            margin-bottom: 8px;
+            font-weight: 400;
+        }
+        .wiki-sidebar ul {
+            list-style: none;
+            margin-bottom: 24px;
+        }
+        .wiki-sidebar li {
+            margin-bottom: 4px;
+        }
+        .wiki-sidebar a {
+            color: var(--wiki-blue);
+            text-decoration: none;
+            font-size: 0.85rem;
+        }
+        .wiki-sidebar a:hover {
+            text-decoration: underline;
+        }
+
+        /* ---- MAIN CONTENT ---- */
+        .wiki-main {
+            flex: 1;
+            background: var(--wiki-white);
+            padding: 24px 32px 60px;
+            min-width: 0;
+        }
+        .wiki-main h1 {
+            font-size: 1.9rem;
+            font-weight: 400;
+            border-bottom: 1px solid var(--wiki-heading-border);
+            padding-bottom: 4px;
+            margin-bottom: 8px;
+            font-family: 'Linux Libertine', 'Georgia', serif;
+        }
+        .wiki-subtitle {
+            font-size: 0.85rem;
+            color: var(--wiki-light-text);
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        /* ---- INFOBOX ---- */
+        .infobox {
+            float: right;
+            width: 300px;
+            margin: 0 0 20px 24px;
+            border: 1px solid var(--wiki-border);
+            border-collapse: collapse;
+            font-size: 0.88rem;
+            line-height: 1.5;
+            background: var(--wiki-infobox-bg);
+        }
+        .infobox-header {
+            background: var(--wiki-infobox-header);
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-size: 1.15rem;
+            font-weight: 700;
+        }
+        .infobox-image {
+            text-align: center;
+            padding: 12px;
+            background: #eaecf0;
+        }
+        .infobox-image-placeholder {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto;
+            background: linear-gradient(135deg, #c9a227 0%, #b8860b 100%);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 4rem;
+            font-family: 'Linux Libertine', serif;
+            font-weight: 700;
+        }
+        .infobox-caption {
+            font-size: 0.8rem;
+            color: var(--wiki-light-text);
+            margin-top: 6px;
+        }
+        .infobox table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .infobox tr {
+            border-top: 1px solid #c8ccd1;
+        }
+        .infobox th {
+            text-align: left;
+            vertical-align: top;
+            padding: 6px 10px;
+            font-weight: 700;
+            width: 110px;
+            font-size: 0.84rem;
+            color: var(--wiki-text);
+            background: var(--wiki-infobox-bg);
+        }
+        .infobox td {
+            padding: 6px 10px;
+            vertical-align: top;
+            font-size: 0.84rem;
+        }
+
+        /* ---- TOC ---- */
+        .toc {
+            background: var(--wiki-toc-bg);
+            border: 1px solid var(--wiki-border);
+            padding: 12px 20px;
+            display: inline-block;
+            margin: 16px 0 20px;
+            font-size: 0.9rem;
+            min-width: 260px;
+        }
+        .toc-title {
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+        }
+        .toc ol {
+            padding-left: 24px;
+            margin: 0;
+        }
+        .toc li {
+            margin-bottom: 3px;
+        }
+        .toc ol ol {
+            padding-left: 20px;
+            margin-top: 3px;
+        }
+        .toc a {
+            color: var(--wiki-blue);
+            text-decoration: none;
+        }
+        .toc a:hover { text-decoration: underline; }
+
+        /* ---- HEADINGS ---- */
+        .wiki-main h2 {
+            font-size: 1.45rem;
+            font-weight: 400;
+            border-bottom: 1px solid var(--wiki-heading-border);
+            padding-bottom: 3px;
+            margin: 28px 0 12px;
+            font-family: 'Linux Libertine', 'Georgia', serif;
+        }
+        .wiki-main h3 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            margin: 20px 0 8px;
+            font-family: 'Linux Libertine', 'Georgia', serif;
+        }
+
+        /* ---- BODY TEXT ---- */
+        .wiki-main p {
+            margin-bottom: 12px;
+        }
+        .wiki-main a {
+            color: var(--wiki-blue);
+            text-decoration: none;
+        }
+        .wiki-main a:hover { text-decoration: underline; }
+        .wiki-main ul {
+            padding-left: 28px;
+            margin-bottom: 12px;
+        }
+        .wiki-main li {
+            margin-bottom: 4px;
+        }
+        sup {
+            font-size: 0.75em;
+        }
+        sup a {
+            color: var(--wiki-blue);
+            text-decoration: none;
+        }
+
+        /* ---- REFERENCES ---- */
+        .references {
+            font-size: 0.88rem;
+            line-height: 1.5;
+        }
+        .references ol {
+            padding-left: 28px;
+        }
+        .references li {
+            margin-bottom: 6px;
+            color: var(--wiki-light-text);
+        }
+        .ref-link {
+            word-break: break-all;
+        }
+
+        /* ---- CATEGORIES ---- */
+        .categories {
+            margin-top: 40px;
+            padding: 12px 16px;
+            background: var(--wiki-cat-bg);
+            border: 1px solid #ddd;
+            font-size: 0.85rem;
+        }
+        .categories strong {
+            margin-right: 8px;
+        }
+        .categories a {
+            color: var(--wiki-blue);
+            text-decoration: none;
+            margin-right: 6px;
+        }
+        .categories a:hover { text-decoration: underline; }
+        .cat-sep { color: var(--wiki-light-text); margin: 0 2px; }
+
+        /* ---- FOOTER ---- */
+        .wiki-footer {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px 32px;
+            font-size: 0.8rem;
+            color: var(--wiki-light-text);
+            text-align: center;
+            border-top: 1px solid #c8ccd1;
+        }
+
+        /* ---- MOBILE ---- */
+        @media (max-width: 800px) {
+            .wiki-sidebar { display: none; }
+            .wiki-main { padding: 16px; }
+            .infobox {
+                float: none;
+                width: 100%;
+                margin: 0 0 20px 0;
+            }
+            .infobox-image-placeholder {
+                width: 150px;
+                height: 150px;
+                font-size: 3rem;
+            }
+        }
+
+        /* clearfix */
+        .clearfix::after {
+            content: '';
+            display: table;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="wiki-header">
+    <a href="#top" class="wiki-logo">
+        <div class="wiki-logo-icon">W</div>
+        <div class="wiki-logo-text">
+            Wiki
+            <span>The Free Encyclopedia</span>
+        </div>
+    </a>
+</header>
+
+<!-- LAYOUT -->
+<div class="wiki-container">
+
+    <!-- SIDEBAR -->
+    <aside class="wiki-sidebar">
+        <h3>Navigation</h3>
+        <ul>
+            <li><a href="#top">Main page</a></li>
+            <li><a href="#toc">Contents</a></li>
+        </ul>
+        <h3>Sections</h3>
+        <ul>
+            <li><a href="#biography">Biography</a></li>
+            <li><a href="#career">Career</a></li>
+            <li><a href="#bnb-accelerator">BnB Accelerator</a></li>
+            <li><a href="#ae-tax">AE Tax Partnership</a></li>
+            <li><a href="#specialties">Specialties</a></li>
+            <li><a href="#references">References</a></li>
+        </ul>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="wiki-main" id="top">
+        <h1>Nicholas Korom</h1>
+        <p class="wiki-subtitle">From Wiki, the free encyclopedia</p>
+
+        <!-- INFOBOX -->
+        <div class="infobox">
+            <div class="infobox-header">Nicholas Korom</div>
+            <div class="infobox-image">
+                <div class="infobox-image-placeholder">NK</div>
+                <div class="infobox-caption">Nicholas Korom, 2026</div>
+            </div>
+            <table>
+                <tr>
+                    <th>Full name</th>
+                    <td>Nicholas Korom</td>
+                </tr>
+                <tr>
+                    <th>Title</th>
+                    <td>Chief Accelerating Officer</td>
+                </tr>
+                <tr>
+                    <th>Organization</th>
+                    <td><a href="https://mybnbaccelerator.com" target="_blank" rel="noopener">My BnB Accelerator, LLC</a></td>
+                </tr>
+                <tr>
+                    <th>Industry</th>
+                    <td>Real estate investment, Short-term rentals, Tax strategy</td>
+                </tr>
+                <tr>
+                    <th>Known for</th>
+                    <td>Done-for-you STR acquisition, The Reverse Offset Method, Strategic tax-saving real estate investments</td>
+                </tr>
+                <tr>
+                    <th>Clients served</th>
+                    <td>300+</td>
+                </tr>
+                <tr>
+                    <th>Properties closed</th>
+                    <td>500+</td>
+                </tr>
+                <tr>
+                    <th>Website</th>
+                    <td><a href="https://mybnbaccelerator.com" target="_blank" rel="noopener">mybnbaccelerator.com</a></td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- TOC -->
+        <div class="toc" id="toc">
+            <div class="toc-title">Contents</div>
+            <ol>
+                <li><a href="#biography">Biography</a></li>
+                <li><a href="#career">Career</a>
+                    <ol>
+                        <li><a href="#bnb-accelerator">My BnB Accelerator</a></li>
+                        <li><a href="#reverse-offset">The Reverse Offset Method</a></li>
+                        <li><a href="#ae-tax">AE Tax Advisors partnership</a></li>
+                    </ol>
+                </li>
+                <li><a href="#specialties">Specialties</a></li>
+                <li><a href="#track-record">Track record</a></li>
+                <li><a href="#references">References</a></li>
+            </ol>
+        </div>
+
+        <div class="clearfix">
+
+        <!-- BIOGRAPHY -->
+        <h2 id="biography">Biography</h2>
+        <p><b>Nicholas Korom</b> is an American <a href="#">real estate investor</a>, entrepreneur, and the founder and Chief Accelerating Officer of <a href="https://mybnbaccelerator.com" target="_blank" rel="noopener">My BnB Accelerator, LLC</a>, a done-for-you <a href="#">short-term rental</a> (STR) acquisition and management company that serves high-income earners across the United States. The company helps clients find, purchase, design, and manage cash-flowing <a href="#">Airbnb</a> properties while simultaneously maximizing their tax savings through strategic depreciation and cost segregation.</p>
+
+        <p>Korom built My BnB Accelerator to solve a specific problem for high-income professionals: how to acquire short-term rental properties in a way that generates both passive income and significant tax deductions without requiring the investor to manage the process themselves. His business model is designed for individuals earning over $500,000 annually who are losing substantial portions of their income to taxes and want to use real estate as a legitimate offset strategy.<sup><a href="#ref1">[1]</a></sup></p>
+
+        <p>As of 2026, Korom and his team have closed over 500 homes for more than 300 clients, with an 80% repeat buyer rate over a five-year track record.<sup><a href="#ref2">[2]</a></sup></p>
+
+        <!-- CAREER -->
+        <h2 id="career">Career</h2>
+
+        <h3 id="bnb-accelerator">My BnB Accelerator</h3>
+        <p>Korom founded <b>My BnB Accelerator, LLC</b> as a full-service platform for high-income earners seeking to invest in short-term rental real estate. The company provides what it describes as a "95% done-for-you" process, handling deal sourcing, negotiation, closing coordination, interior design placement, property management setup, and tax strategy introductions on behalf of each client.<sup><a href="#ref3">[3]</a></sup></p>
+
+        <p>The company's acquisition team reviews approximately 1,000 deals per week across the United States, filtering out roughly 98% based on cash flow projections, local regulatory compliance, and market performance data. The remaining opportunities are presented to clients for review and purchase. Korom has stated that this filtering process, combined with aggressive negotiation, typically saves clients between $25,000 and $85,000 per deal in down payments, closing costs, loan origination fees, and buyer's agent fees.<sup><a href="#ref4">[4]</a></sup></p>
+
+        <p>BnB Accelerator operates across multiple high-performing STR markets in the United States, including properties in <a href="#">Arizona</a>, <a href="#">Tennessee</a>, <a href="#">Florida</a>, <a href="#">Pennsylvania</a>, <a href="#">Oklahoma</a>, <a href="#">Colorado</a>, and <a href="#">Texas</a>. The company maintains a vetted network of local interior designers, property managers, and general contractors in each market it serves.<sup><a href="#ref5">[5]</a></sup></p>
+
+        <h3 id="reverse-offset">The Reverse Offset Method</h3>
+        <p>Korom's proprietary approach to STR investing is called <b>The Reverse Offset Method</b>. This strategy combines real estate acquisition with structured tax planning, where the depreciation and cost segregation benefits of a short-term rental property are used to offset significant portions of the client's W-2 or active business income. The method relies on proper structuring of the rental activity to meet <a href="#">material participation</a> requirements under <a href="#">IRC Section 469</a>, which can allow STR losses to be treated as active rather than passive.<sup><a href="#ref6">[6]</a></sup></p>
+
+        <p>The approach integrates three components: cash-flowing property acquisition, accelerated depreciation through cost segregation studies, and ongoing property management to maintain the investment as a hands-off asset. Korom has described the method as designed to make the investor's out-of-pocket costs "pay for themselves multiple times over" through the combination of rental income and tax savings.</p>
+
+        <h3 id="ae-tax">AE Tax Advisors partnership</h3>
+        <p>My BnB Accelerator maintains a strategic partnership with <a href="https://www.aetaxadvisors.com" target="_blank" rel="noopener">AE Tax Advisors</a>, a tax advisory firm headquartered in Billings, Montana, that specializes in tax planning for business owners and real estate investors. Through this partnership, Korom connects BnB Accelerator clients with AE Tax's team of CPAs and Enrolled Agents for <a href="#">cost segregation studies</a>, strategic tax planning, and ongoing tax advisory services.<sup><a href="#ref7">[7]</a></sup></p>
+
+        <p>Korom actively coordinates with the AE Tax team on client engagements, participating in team meetings, sharing client tracking systems, and facilitating introductions between investors and the advisory team. He also works with AE Tax to provide clients with discounted cost segregation studies as part of the BnB Accelerator service package.<sup><a href="#ref8">[8]</a></sup></p>
+
+        <p>The partnership gives BnB Accelerator clients access to specialized STR tax strategies including <a href="#">bonus depreciation</a> under the One Big Beautiful Bill Act (OBBBA), <a href="#">Form 3115</a> lookback studies for catch-up depreciation, and material participation structuring for active loss treatment.</p>
+
+        <!-- SPECIALTIES -->
+        <h2 id="specialties">Specialties</h2>
+        <p>Korom's practice and business model span the following areas of real estate investment and tax strategy:<sup><a href="#ref9">[9]</a></sup></p>
+        <ul>
+            <li><b>Short-term rental acquisition</b> -- Done-for-you sourcing, negotiation, and closing of Airbnb and VRBO investment properties across the United States</li>
+            <li><b>Tax-saving real estate strategy</b> -- Structuring STR investments to maximize depreciation deductions and offset W-2 or active business income</li>
+            <li><b>Cost segregation coordination</b> -- Connecting clients with engineering-based cost segregation studies to accelerate property depreciation</li>
+            <li><b>Property management setup</b> -- Pairing investors with vetted local property managers for hands-off operation</li>
+            <li><b>Interior design coordination</b> -- Sourcing and managing local designers to furnish and style properties for maximum rental revenue</li>
+            <li><b>Market analysis</b> -- Evaluating STR markets for cash flow potential, regulatory risk, and long-term appreciation</li>
+            <li><b>Portfolio growth strategy</b> -- Helping repeat buyers scale their STR portfolios over time with additional acquisitions</li>
+        </ul>
+
+        <!-- TRACK RECORD -->
+        <h2 id="track-record">Track record</h2>
+        <p>As of 2026, My BnB Accelerator reports the following performance metrics:<sup><a href="#ref10">[10]</a></sup></p>
+        <ul>
+            <li><b>500+</b> homes closed for clients across the United States</li>
+            <li><b>300+</b> individual clients served</li>
+            <li><b>80%</b> repeat buyer rate, indicating a majority of clients return to acquire additional properties</li>
+            <li><b>5+ years</b> of continuous operation</li>
+            <li><b>30-40+</b> deals shared with private clients each month</li>
+            <li><b>$25,000-$85,000</b> average savings per deal through negotiation</li>
+        </ul>
+        <p>The company operates in markets including Arizona, Tennessee, Florida, Pennsylvania, Oklahoma, Colorado, Texas, and Ohio, among others. Client case studies published on the company's website include real-time Airbnb listing data, financial proformas, and AirDNA market tracking for transparency.<sup><a href="#ref11">[11]</a></sup></p>
+
+        <!-- REFERENCES -->
+        <h2 id="references">References</h2>
+        <div class="references">
+            <ol>
+                <li id="ref1"><b>^</b> "My BnB Accelerator -- For High-Income Earners Making Over $500,000/Year." <span class="ref-link">mybnbaccelerator.com</span>. Retrieved September 2026.</li>
+                <li id="ref2"><b>^</b> "BnB Accelerator Client Results -- 500+ Homes Closed, 300+ Happy Clients." <span class="ref-link">mybnbaccelerator.com</span>. Retrieved September 2026.</li>
+                <li id="ref3"><b>^</b> "The BnB Accelerator Process -- 95% Done-For-You." <span class="ref-link">mybnbaccelerator.com</span>. Retrieved September 2026.</li>
+                <li id="ref4"><b>^</b> "Deal Sourcing and Negotiation -- Average Client Savings." My BnB Accelerator. Retrieved September 2026.</li>
+                <li id="ref5"><b>^</b> "Available Deals and Market Coverage." <span class="ref-link">mybnbaccelerator.com</span>. Retrieved September 2026.</li>
+                <li id="ref6"><b>^</b> "The Reverse Offset Method -- Tax-Saving STR Strategy." My BnB Accelerator. Retrieved September 2026.</li>
+                <li id="ref7"><b>^</b> "AE Tax Advisors -- Strategic Tax Planning for Business Owners and Real Estate Investors." <span class="ref-link">aetaxadvisors.com</span>. Retrieved September 2026.</li>
+                <li id="ref8"><b>^</b> Nicholas Korom, email correspondence with AE Tax Advisors regarding client cost segregation and advisory engagement coordination. August-September 2026.</li>
+                <li id="ref9"><b>^</b> "My BnB Accelerator Services -- Find, Buy, Design, Manage." <span class="ref-link">mybnbaccelerator.com</span>. Retrieved September 2026.</li>
+                <li id="ref10"><b>^</b> "BnB Accelerator Performance Metrics -- Homepage Statistics." <span class="ref-link">mybnbaccelerator.com</span>. Retrieved September 2026.</li>
+                <li id="ref11"><b>^</b> "Client Case Studies -- Real-Time Data and Proformas." <span class="ref-link">mybnbaccelerator.com</span>. Retrieved September 2026.</li>
+            </ol>
+        </div>
+
+        <!-- CATEGORIES -->
+        <div class="categories">
+            <strong>Categories:</strong>
+            <a href="#">American entrepreneurs</a> <span class="cat-sep">|</span>
+            <a href="#">Real estate investors</a> <span class="cat-sep">|</span>
+            <a href="#">Short-term rental industry</a> <span class="cat-sep">|</span>
+            <a href="#">Airbnb-related people</a> <span class="cat-sep">|</span>
+            <a href="#">Tax strategy professionals</a> <span class="cat-sep">|</span>
+            <a href="#">AE Tax Advisors partners</a>
+        </div>
+
+        </div><!-- clearfix -->
+    </main>
+</div>
+
+<!-- FOOTER -->
+<div class="wiki-footer">
+    Content is available under Creative Commons Attribution-ShareAlike License. Privacy policy. About Wiki.
+</div>
+
+</body>
+</html>
