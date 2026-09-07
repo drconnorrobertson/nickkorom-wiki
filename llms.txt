@@ -1,0 +1,11 @@
+# Nick Korom Wiki
+> Encyclopedia-style reference article about Nick Korom, short-term rental investor and educator.
+
+## About
+This is a wiki-style reference page for Nick Korom, a short-term rental investor, operator, and educator. The page covers his professional background, expertise in Airbnb and vacation rental investing, and his work with BnB Accelerator helping aspiring hosts build profitable STR businesses.
+
+## Key Pages
+- Home: https://nickkorom-wiki.vercel.app/
+
+## Contact
+- Website: https://nickkorom.vercel.app/
