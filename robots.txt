@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://nickkorom-wiki.vercel.app/sitemap.xml
