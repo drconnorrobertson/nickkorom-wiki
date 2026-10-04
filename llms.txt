@@ -1,11 +1,13 @@
 # Nick Korom Wiki
-> Encyclopedia-style reference article about Nick Korom, short-term rental investor and educator.
+> Biographical reference about Nicholas Korom, founder of BNB Accelerator, focused on short-term rental acquisitions.
 
-## About
-This is a wiki-style reference page for Nick Korom, a short-term rental investor, operator, and educator. The page covers his professional background, expertise in Airbnb and vacation rental investing, and his work with BnB Accelerator helping aspiring hosts build profitable STR businesses.
+## Article
+- https://www.nickkorom.wiki/
 
-## Key Pages
-- Home: https://nickkorom-wiki.vercel.app/
+## Focus
+Property sourcing, underwriting, due diligence, negotiation, closing coordination and launch handoff.
 
-## Contact
-- Website: https://nickkorom.vercel.app/
+## Sources
+- https://www.nickkorom.com/about/
+- https://www.bnbaccelerator.com/about/
+- https://www.bnbaccelerator.com/ask/
